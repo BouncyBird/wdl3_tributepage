@@ -1,0 +1,132 @@
+.loader {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  padding: 100px;
+  background: #efefef;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0deg);
+  filter: blur(10px) contrast(18);
+}
+.particle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.particle:first-child, .particle:last-child {
+  width: 25px;
+  height: 25px;
+}
+.particle:nth-child(odd) {
+  animation: pulse 2s ease-in-out infinite;
+}
+.leftSpin {
+  animation: leftSpin 2.4s linear infinite;
+}
+.rightSpin {
+  animation: rightSpin 2s linear infinite;
+}
+.particle:nth-child(3) {
+  animation-delay: 0.12s;
+}
+.particle:nth-child(5) {
+  animation-delay: 0.30s;
+}
+.particle:nth-child(7) {
+  animation-delay: 0.60s;
+}
+.particle:nth-child(9) {
+  animation-delay: 0.25s;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.8);
+  }
+  70% {
+    transform: scale(0.6);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes leftSpin {
+  from {
+    transform: rotate(0deg) translateX(50px);
+  }
+  to {
+    transform: rotate(360deg) translateX(50px);
+  }
+}
+@keyframes rightSpin {
+  from {
+    transform: rotate(360deg) translateX(50px);
+  }
+  to {
+    transform: rotate(0deg) translateX(50px);
+  }
+}
+.particle:nth-child(9n + 1) {
+  background: blue;
+}
+.particle:nth-child(9n + 2) {
+  background: red;
+}
+.particle:nth-child(9n + 3) {
+  background: red;
+}
+.particle:nth-child(9n + 4) {
+  background: darkred;
+}
+.particle:nth-child(9n + 5) {
+  background: darkblue;
+}
+.particle:nth-child(9n + 6) {
+  background: darkred;
+}
+.particle:nth-child(9n + 7) {
+  background: red;
+}
+.particle:nth-child(9n + 8) {
+  background: red;
+}
+.particle:nth-child(9n + 9) {
+  background: blue;
+}
+
+body {
+  background: #efefef;
+}
+
+.centimg {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bgc {
+    background: linear-gradient(-45deg, #00f260, #324de7);
+}
+
+body {
+  background: linear-gradient(-45deg, #00f260, #324de7, #fa5b46, #db2950);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+  color: #333333;
+  margin-top: 5rem;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
