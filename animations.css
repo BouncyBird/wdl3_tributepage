@@ -4,6 +4,7 @@
     animation-name: topanim;
     animation-duration: 1500ms;
     animation-timing-function: ease;
+    animation-delay: 2500ms;
 }
 
 @keyframes topanim {
@@ -21,6 +22,7 @@
     animation-name: aboutanim;
     animation-duration: 1500ms;
     animation-timing-function: ease;
+    animation-delay: 2500ms;
 }
 
 @keyframes aboutanim {
